@@ -31,7 +31,7 @@ import UserNotifications
 
 final class NotificationDelegate: NSObject,
   UNUserNotificationCenterDelegate {
-  
+  //present foreground
   func userNotificationCenter(
     _ center: UNUserNotificationCenter,
     willPresent notification: UNNotification,
@@ -39,7 +39,7 @@ final class NotificationDelegate: NSObject,
     @escaping (UNNotificationPresentationOptions) -> Void) {
     completionHandler([.alert, .sound, .badge])
   }
-
+//tap action
   func userNotificationCenter(
     _ center: UNUserNotificationCenter,
     didReceive response: UNNotificationResponse,
